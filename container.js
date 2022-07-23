@@ -23,7 +23,7 @@ export default class Container {
             } else {
                 const dataJson = JSON.parse(data);
                 
-                if(dataJson){
+                if(dataJson.length === 0){
                     dataJsonString = JSON.stringify([{...obj, id: 1}], null, 2);
                 } else {
                     dataJsonString = JSON.stringify([...dataJson, {...obj, id: dataJson[dataJson.length-1].id + 1}], null, 2);
